@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://c6uitayv71w4m"]
 
+[ext_resource type="Script" uid="uid://bu54a31g1y744" path="res://valinta.gd" id="1_krhrp"]
+[ext_resource type="Texture2D" uid="uid://c4lnvmhtectd5" path="res://kala.png" id="2_14wco"]
+[ext_resource type="Texture2D" uid="uid://l1muy7pcxyvj" path="res://ankkuri.png" id="3_krhrp"]
+[ext_resource type="Texture2D" uid="uid://cjveht5wufksb" path="res://kalapala.png" id="3_xym2c"]
+[ext_resource type="Texture2D" uid="uid://pwgcigvknh4b" path="res://tähti.png" id="4_8rt1u"]
+
 [node name="Valinta" type="Node2D" unique_id=1806856445]
+script = ExtResource("1_krhrp")
+
+[node name="Kalapala" type="Sprite2D" parent="." unique_id=923374]
+position = Vector2(-309, 249)
+scale = Vector2(0.6507463, 0.6019608)
+skew = 0.70685834
+texture = ExtResource("3_xym2c")
+
+[node name="Kala" type="Sprite2D" parent="." unique_id=1162891860]
+position = Vector2(221, -189)
+texture = ExtResource("2_14wco")
+
+[node name="Ankkuri" type="Sprite2D" parent="." unique_id=42636147]
+position = Vector2(784, -172)
+texture = ExtResource("3_krhrp")
+
+[node name="Tähti" type="Sprite2D" parent="." unique_id=1891088599]
+position = Vector2(1241, -123)
+texture = ExtResource("4_8rt1u")

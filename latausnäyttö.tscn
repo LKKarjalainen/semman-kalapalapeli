@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b5fwitxawurr7"]
+
+[ext_resource type="Texture2D" uid="uid://c3t36ohqy6mcv" path="res://latausnäyttö.png" id="1_vexec"]
+[ext_resource type="Script" uid="uid://cqow8rrf7qodg" path="res://latausnäyttö.gd" id="1_w7oo4"]
+[ext_resource type="Texture2D" uid="uid://cjveht5wufksb" path="res://kalapala.png" id="2_a03yp"]
+
+[node name="Latausnäyttö" type="Node2D" unique_id=2065818630]
+script = ExtResource("1_w7oo4")
+
+[node name="Label" type="Label" parent="." unique_id=625862519]
+z_index = 4
+offset_left = 15.0
+offset_top = 259.0
+offset_right = 805.0
+offset_bottom = 533.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.5)
+offset_transform_rotation = -0.24958208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+text = "LADATAAN"
+
+[node name="Latausnäyttö" type="Sprite2D" parent="." unique_id=1434111071]
+position = Vector2(575.50006, 321.5)
+scale = Vector2(0.33209807, 0.26895162)
+texture = ExtResource("1_vexec")
+
+[node name="Kalapala" type="Sprite2D" parent="." unique_id=724017865]
+position = Vector2(380.00003, 591)
+scale = Vector2(1.1, 0.3)
+texture = ExtResource("2_a03yp")
