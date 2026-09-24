@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://l1muy7pcxyvj" path="res://ankkuri.png" id="3_krhrp"]
 [ext_resource type="Texture2D" uid="uid://cjveht5wufksb" path="res://kalapala.png" id="3_xym2c"]
 [ext_resource type="Texture2D" uid="uid://pwgcigvknh4b" path="res://tähti.png" id="4_8rt1u"]
+[ext_resource type="Texture2D" uid="uid://bl5wpxg30lx2o" path="res://lautanen.png" id="6_8rt1u"]
+[ext_resource type="Texture2D" uid="uid://c3t36ohqy6mcv" path="res://latausnäyttö.png" id="7_0widi"]
+[ext_resource type="Texture2D" uid="uid://dsvnei380ukl1" path="res://vihanen.png" id="8_ixyxm"]
 
 [node name="Valinta" type="Node2D" unique_id=1806856445]
 script = ExtResource("1_krhrp")
@@ -26,3 +29,75 @@ texture = ExtResource("3_krhrp")
 [node name="Tähti" type="Sprite2D" parent="." unique_id=1891088599]
 position = Vector2(1241, -123)
 texture = ExtResource("4_8rt1u")
+
+[node name="Label2" type="Label" parent="." unique_id=1203914140]
+offset_left = 368.0
+offset_top = 36.0
+offset_right = 631.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 30
+text = "Otatko kalapalan?"
+
+[node name="Kyllä" type="TextureButton" parent="." unique_id=475806816]
+offset_left = 122.0
+offset_top = 111.0
+offset_right = 487.0
+offset_bottom = 223.0
+texture_normal = ExtResource("2_14wco")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="Label" type="Label" parent="Kyllä" unique_id=3715211]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 43.0
+offset_right = 322.0
+offset_bottom = 120.0
+offset_transform_enabled = true
+offset_transform_rotation = 0.3298672
+theme_override_font_sizes/font_size = 29
+text = "Kyllä"
+
+[node name="Ei" type="TextureButton" parent="." unique_id=2070471644]
+offset_left = 672.0
+offset_top = 27.0
+offset_right = 905.0
+offset_bottom = 203.0
+texture_normal = ExtResource("4_8rt1u")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Ei" unique_id=14401865]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 60.0
+offset_right = 201.0
+offset_bottom = 129.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 1)
+offset_transform_rotation = 0.16580628
+theme_override_font_sizes/font_size = 41
+text = "En"
+
+[node name="Lautanen" type="Sprite2D" parent="." unique_id=416141974]
+position = Vector2(568, 436)
+scale = Vector2(0.18020834, 0.18854167)
+texture = ExtResource("6_8rt1u")
+
+[node name="Latausnäyttö" type="Sprite2D" parent="." unique_id=1964763893]
+position = Vector2(1029, 381)
+scale = Vector2(0.18304819, 0.22418587)
+texture = ExtResource("7_0widi")
+region_enabled = true
+region_rect = Rect2(2223.5764, 422.7378, 1164.9543, 1991.0144)
+
+[node name="Timer" type="Timer" parent="." unique_id=305034524]
+wait_time = 5.0
+one_shot = true
+
+[node name="Vihanen" type="Sprite2D" parent="." unique_id=944462260]
+visible = false
+position = Vector2(1029.25, 379)
+scale = Vector2(0.4473181, 0.47088355)
+texture = ExtResource("8_ixyxm")
