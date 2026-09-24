@@ -29,3 +29,9 @@ texture = ExtResource("1_vexec")
 position = Vector2(380.00003, 591)
 scale = Vector2(1.1, 0.3)
 texture = ExtResource("2_a03yp")
+centered = false
+region_enabled = true
+
+[node name="Timer" type="Timer" parent="." unique_id=605853340]
+wait_time = 25.0
+one_shot = true

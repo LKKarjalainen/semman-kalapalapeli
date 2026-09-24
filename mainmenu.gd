@@ -1,16 +1,13 @@
 extends Node2D
 
-var latausnäyttö = preload("res://latausnäyttö.tscn").instantiate()
-var häviö = preload("res://häviö.tscn").instantiate()
-
 @onready var pyörivät_kalapuikot = [get_node("Kalapuikko1"), get_node("Kalapuikko2")]
 
 func _häviä_peli():
-	get_tree().root.add_child(häviö)
+	get_tree().change_scene_to_file("res://häviö.tscn")
 	pass
 
 func _aloita_peli():
-	get_tree().root.add_child(latausnäyttö)
+	get_tree().change_scene_to_file("res://latausnäyttö.tscn")
 	pass
 
 # Called when the node enters the scene tree for the first time.
