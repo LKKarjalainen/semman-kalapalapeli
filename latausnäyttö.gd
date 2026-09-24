@@ -14,6 +14,9 @@ func _ready() -> void:
 	kalapalan_koko = kalapala.texture.get_size()
 	kalapala.position -= kalapalan_koko * kalapala.scale / 2
 
+	var musika: AudioStreamPlayer = get_node("AudioStreamPlayer")
+	musika.play()
+
 	ajastin.start()
 	ajastin.timeout.connect(_ladattu)
 

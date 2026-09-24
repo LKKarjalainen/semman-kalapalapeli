@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c3t36ohqy6mcv" path="res://latausnäyttö.png" id="1_vexec"]
 [ext_resource type="Script" uid="uid://cqow8rrf7qodg" path="res://latausnäyttö.gd" id="1_w7oo4"]
 [ext_resource type="Texture2D" uid="uid://cjveht5wufksb" path="res://kalapala.png" id="2_a03yp"]
+[ext_resource type="AudioStream" uid="uid://c6it85wdrjmhm" path="res://fridge.ogg" id="4_676t1"]
 
 [node name="Latausnäyttö" type="Node2D" unique_id=2065818630]
 script = ExtResource("1_w7oo4")
@@ -33,5 +34,8 @@ centered = false
 region_enabled = true
 
 [node name="Timer" type="Timer" parent="." unique_id=605853340]
-wait_time = 25.0
+wait_time = 13.0
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=106435067]
+stream = ExtResource("4_676t1")

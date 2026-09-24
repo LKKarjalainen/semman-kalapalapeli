@@ -3,6 +3,9 @@ extends Node2D
 @onready var ajastin: Timer = get_node("Timer")
 @onready var lautanen: Sprite2D = get_node("Lautanen")
 @onready var lentävät: Array[Sprite2D] = [get_node("Kalapala"), get_node("Kala"), get_node("Ankkuri"), get_node("Tähti")]
+@onready var musika: AudioStreamPlayer = get_node("AudioStreamPlayer")
+@onready var warning: AudioStreamPlayer = get_node("warning")
+
 
 const LENTOAIKA := 1.2
 const PYÖRÄHDYKSET := 2
@@ -24,6 +27,9 @@ func _älä_ota_kalapala() -> void:
 
 func _häviä_peli() -> void:
 	get_node("Vihanen").visible = true
+	get_node("mitä").visible = true
+	musika.stop()
+	warning.play()
 	ajastin.start()
 	ajastin.timeout.connect(_vaihda_scene)
 
@@ -36,6 +42,8 @@ func _ready() -> void:
 	kyllä_nappi.pressed.connect(_ota_kalapala)
 	var ei_nappi = get_node("Ei")
 	ei_nappi.pressed.connect(_älä_ota_kalapala)
+	
+	musika.play()
 
 func _lennätä_lautaselle(kuva: Sprite2D) -> void:
 	# Draw on top of the plate

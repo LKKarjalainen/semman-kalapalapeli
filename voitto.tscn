@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://boewehe0gdqyi" path="res://voitto.gd" id="1_8t0tw"]
 [ext_resource type="Texture2D" uid="uid://cpldaeq2uh8s6" path="res://good.png" id="1_x5y82"]
 [ext_resource type="Texture2D" uid="uid://l1muy7pcxyvj" path="res://ankkuri.png" id="2_kn83k"]
+[ext_resource type="AudioStream" uid="uid://btiij4qayy3sc" path="res://casino.ogg" id="4_g0mf2"]
 
 [node name="Voitto" type="Node2D" unique_id=1437476370]
 script = ExtResource("1_8t0tw")
@@ -41,3 +42,7 @@ offset_transform_enabled = true
 offset_transform_rotation = 0.3298672
 theme_override_font_sizes/font_size = 29
 text = "OK"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1416657058]
+stream = ExtResource("4_g0mf2")
+parameters/looping = true

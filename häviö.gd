@@ -7,6 +7,9 @@ func _aloita_uusi_peli() -> void:
 func _ready() -> void:
 	var ok_nappi = get_node("OK")
 	ok_nappi.pressed.connect(_aloita_uusi_peli)
+	
+	var musika: AudioStreamPlayer = get_node("AudioStreamPlayer")
+	musika.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

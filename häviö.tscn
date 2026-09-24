@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://e0b3ewkyyvv4" path="res://häviö.gd" id="1_u5v0p"]
 [ext_resource type="Texture2D" uid="uid://clqy4mmoekbta" path="res://socialcredit.jpg" id="2_qklpu"]
 [ext_resource type="Texture2D" uid="uid://l1muy7pcxyvj" path="res://ankkuri.png" id="4_0k56x"]
+[ext_resource type="AudioStream" uid="uid://bbu55fwftf4l0" path="res://siren.ogg" id="5_u5v0p"]
 
 [node name="Häviö" type="Node2D" unique_id=81925783]
 script = ExtResource("1_u5v0p")
@@ -47,3 +48,7 @@ offset_transform_enabled = true
 offset_transform_rotation = 0.3298672
 theme_override_font_sizes/font_size = 29
 text = "OK"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=985389833]
+stream = ExtResource("5_u5v0p")
+parameters/looping = true

@@ -17,6 +17,9 @@ func _ready() -> void:
 	var ei_nappi = get_node("Ei")
 	ei_nappi.pressed.connect(_häviä_peli)
 	
+	var musika: AudioStreamPlayer = get_node("AudioStreamPlayer")
+	musika.play()
+	
 	pass # Replace with function body.
 
 

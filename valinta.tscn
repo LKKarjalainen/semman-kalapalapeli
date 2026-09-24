@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bl5wpxg30lx2o" path="res://lautanen.png" id="6_8rt1u"]
 [ext_resource type="Texture2D" uid="uid://c3t36ohqy6mcv" path="res://latausnäyttö.png" id="7_0widi"]
 [ext_resource type="Texture2D" uid="uid://dsvnei380ukl1" path="res://vihanen.png" id="8_ixyxm"]
+[ext_resource type="AudioStream" uid="uid://jmulwxienh38" path="res://radio.ogg" id="9_v35ym"]
+[ext_resource type="AudioStream" uid="uid://ccaaimlq4hma5" path="res://dog.ogg" id="10_ewgn0"]
 
 [node name="Valinta" type="Node2D" unique_id=1806856445]
 script = ExtResource("1_krhrp")
@@ -101,3 +103,24 @@ visible = false
 position = Vector2(1029.25, 379)
 scale = Vector2(0.4473181, 0.47088355)
 texture = ExtResource("8_ixyxm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=223170087]
+stream = ExtResource("9_v35ym")
+parameters/looping = true
+
+[node name="warning" type="AudioStreamPlayer" parent="." unique_id=148870649]
+stream = ExtResource("10_ewgn0")
+parameters/looping = true
+
+[node name="mitä" type="Label" parent="." unique_id=1185181075]
+visible = false
+z_index = 10
+offset_left = 107.0
+offset_top = 109.0
+offset_right = 1393.0
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "MITÄ HELVETTTIIÄ 
+SIIHEN ET KOSKE 
+SAATANA"
